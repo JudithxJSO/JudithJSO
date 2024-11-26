@@ -1,0 +1,136 @@
+body {
+    background-color: rgba(0, 0, 0, 0.938); /* Light background for the site */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto; /* Allow content to expand */
+    display: flex;
+    flex-direction: column; /* Stack header and contentWrappers */
+}
+
+header {
+    width: 100%; /* Full width */
+    padding: 20px; /* Adjust space around content */
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+.headerWrapper {
+    display: flex; /* Align items side by side */
+    align-items: center; /* Vertically center the content */
+    justify-content: flex-start; /* Align content to the left */
+    gap: 20px; /* Space between the logo and the text */
+}
+
+.header-main img {
+    width: 200px; /* Set the size of the logo */
+    height: auto;
+}
+
+.header-main h1, .header-main h4 {
+    margin: 0; /* Remove default margin */
+}
+
+/* Flexbox layout for contentWrappers under the header */
+body > div {
+    display: flex;
+    justify-content: space-between; /* Align contentWrappers side by side */
+    width: 100%; /* Full width */
+}
+
+.contentWrapper {
+    display: flex; /* Align columns side by side */
+    flex-direction: column; /* Stack content vertically */
+    width: 48%; /* Make each contentWrapper a bit smaller to fit side by side */
+    margin-right: 2%; /* Space between the contentWrappers */
+    padding-top: 20px; /* Space between header and content */
+    box-sizing: border-box; /* Ensure padding and margin are included in width/height */
+}
+
+.contentWrapper:last-child {
+    margin-right: 0; /* Remove margin from the last contentWrapper */
+}
+
+.contentHover, .contentHover2 {
+    position: relative; /* Change to relative positioning */
+    background-color: transparent; /* No background initially */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    pointer-events: auto; /* Allow interaction */
+    z-index: 1; /* Place above the content */
+}
+
+.contentHover:hover, .contentHover2:hover {
+    background-color: rgba(255, 255, 255, 0.849); /* Add semi-transparent overlay */
+}
+
+.contentHover:hover::after, .contentHover2:hover::after {
+    height: 50%;
+    content: "Emotes"; /* Replace with custom text */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0); /* Text color */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "syncopate";
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: dashed underline overline;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 2; /* Place above everything else */
+}
+
+.columnWrapper {
+    display: flex; /* Layout images horizontally */
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.main, .main2 {
+    position: relative;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.main img, .main2 img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: "syncopate";
+    font-weight: 700;
+    color: rgb(168, 132, 31);
+}
+
+h4 {
+    font-family: "syncopate";
+    font-weight: 500;
+    color: rgb(168, 132, 31);
+}
+
+.contentHover2:hover::after {
+    height: 50%;
+    content: "Other Projects"; /* Replace with custom text */
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0); /* Text color */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "syncopate";
+    font-size: 32px;
+    font-weight: 700;
+    text-decoration: dashed underline overline;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 2; /* Place above everything else */
+}
+
+
